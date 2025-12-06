@@ -26,7 +26,7 @@ const LandingPage = () => {
   return (
     <main className='flex flex-col gap-10 sm:gap-20 py-10 sm:py-20'>
       <section className='text-center'>
-        <h1 className='flex flex-col items-center justify-center gradient-title text-4xl font-extrabold 
+        <h1 className='flex flex-col items-center justify-center gradient gradient-title text-4xl font-extrabold 
         sm:text-6xl lg:text-8xl tracking-tighter py-4'>Find Your Dream Job
           <span className='flex items-center gap-2 lg:gap-6'> and get {" "}
             <img src="/logo.png" alt="Hirrd logo" className='h-14 sm:h-24 lg:h-32' />
@@ -84,13 +84,13 @@ const LandingPage = () => {
 
       {/* accordion */}
       <Accordion type="single" collapsible>
-        {faqs.map((faq,ind)=>{
-        return <AccordionItem key={ind} value={`item-${ind+1}`}>
-          <AccordionTrigger>{faq.question}</AccordionTrigger>
-          <AccordionContent>
-            {faq.answer}
-          </AccordionContent>
-        </AccordionItem>
+        {faqs.map((faq, ind) => {
+          return <AccordionItem key={ind} value={`item-${ind + 1}`}>
+            <AccordionTrigger>{faq.question}</AccordionTrigger>
+            <AccordionContent>
+              {faq.answer}
+            </AccordionContent>
+          </AccordionItem>
 
         })}
       </Accordion>
